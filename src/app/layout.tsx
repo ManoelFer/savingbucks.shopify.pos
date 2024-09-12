@@ -1,13 +1,13 @@
-import { Inter } from "next/font/google";
+import { Inter } from 'next/font/google';
 
-import type { Metadata } from "next";
+import type { Metadata } from 'next';
 
-import "./globals.css";
+import './globals.css';
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "SavingBucks Shopify POS",
+  title: 'SavingBucks Shopify POS',
   description: `SavingBucks Web Application integrated with Shopify POS(Point of Sale)`,
 };
 
