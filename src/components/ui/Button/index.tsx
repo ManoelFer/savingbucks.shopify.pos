@@ -5,7 +5,11 @@ export function Button({ label = 'Submit', isLoading = false, variant = 'primary
     <button
       type="submit"
       disabled={isLoading}
-      className={(variant === 'primary' && 'text-bold bg-primary rounded-2xl px-3 py-1 text-white') || ''}
+      className={
+        (variant === 'primary' &&
+          'inline-block rounded-md border border-blue-600 p-2 text-blue-600 duration-150 ease-in-out hover:bg-blue-600 hover:text-white') ||
+        ''
+      }
       {...rest}
     >
       {label}

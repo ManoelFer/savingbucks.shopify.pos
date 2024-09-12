@@ -4,7 +4,7 @@ import { GrapQLResponse } from '@/types/shopify/graphql-types';
 import { IStoreResponse } from '@/types/shopify/store';
 
 export const useGetStore = async (): Promise<GrapQLResponse<IStoreResponse>> => {
-  const res = await fetch(process.env.SHOPIFYGR_GRAPHQL_API_URL, {
+  const res = await fetch(process.env.SHOPIFY_GRAPHQL_API_URL, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

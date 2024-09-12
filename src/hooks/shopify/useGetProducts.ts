@@ -3,7 +3,7 @@ import { GrapQLResponse } from '@/types/shopify/graphql-types';
 import { IProductsResponse } from '@/types/shopify/products';
 
 export const useGetProducts = async (): Promise<GrapQLResponse<IProductsResponse>> => {
-  const res = await fetch(process.env.SHOPIFYGR_GRAPHQL_API_URL, {
+  const res = await fetch(process.env.SHOPIFY_GRAPHQL_API_URL, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -14,12 +14,24 @@ export const useGetProducts = async (): Promise<GrapQLResponse<IProductsResponse
         query ProductsQuery {
           products(first: 6) {
             nodes {
-              title
+              description
+              featuredImage {
+                altText
+                id
+                url
+                width
+                height
+              }
+              handle
+              id
               priceRangeV2 {
-                maxVariantPrice {
+                minVariantPrice {
                   amount
+                  currencyCode
                 }
               }
+              tags
+              title
             }
           }
         }

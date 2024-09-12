@@ -1,2 +1,3 @@
 export { Button } from './Button';
-export { Table } from './Table';
+export { Footer } from './Footer';
+export { Navbar } from './Navbar';

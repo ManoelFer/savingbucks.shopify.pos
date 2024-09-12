@@ -1,4 +1,6 @@
-export const USDollar = new Intl.NumberFormat('en-US', {
-  style: 'currency',
-  currency: 'USD',
-});
+export const formatPrice = (price: string) =>
+  Intl.NumberFormat('en-CA', {
+    style: 'currency',
+    currency: 'CAD',
+    minimumFractionDigits: 2,
+  }).format(parseInt(price, 10));
