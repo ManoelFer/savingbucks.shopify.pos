@@ -1,4 +1,4 @@
-export interface SHOPIFYGRAPHQL_EXTENSIONS {
+export interface ShopifyGraphQL_Extensions {
   cost: {
     requestedQueryCost: number;
     actualQueryCost: number;
@@ -8,4 +8,9 @@ export interface SHOPIFYGRAPHQL_EXTENSIONS {
       restoreRate: number;
     };
   };
+}
+
+export interface GrapQLResponse<T> {
+  data: T;
+  extensions: ShopifyGraphQL_Extensions;
 }
